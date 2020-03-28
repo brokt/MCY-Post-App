@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MP1.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MCY Post</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style=" height:120px; margin-left:0px; margin-top:0px; margin-right:0px; background-color:#ffffff;">
+        
+        <div style=" float:left; padding-left:20px; width:350px;">
+        <asp:DataList ID="DL_Logo" runat="server">
+        <ItemTemplate>
+            <img alt="<%# Eval("F_ADI")%>" title="<%# Eval("F_UNVANI")%>" src="<%# "mcy_thumbnail_images.aspx?dosya=logos/"+ Eval("F_LOGO")+ ""%>" />
+        </ItemTemplate>
+        </asp:DataList>
+        </div>
+               
+            
+        <div style="float:left; width:auto; padding:50px 10px 0 10px;">
+        <asp:DataList ID="DL_Header" runat="server">
+        <ItemTemplate>
+        <p class="font_uyari_mesaji"><%# Eval("F_HEADER_UYARI")%></p>
+        </ItemTemplate>
+        </asp:DataList>
+        </div>
+                 
+        <div style=" float:right; padding-right:20px; width:160px;">
+            <div class="login_footer">
+            <div style="padding:19px 5px 18px 5px; float:left;">
+            <asp:Label ID="lbl_mcysoft" runat="server" Text="Powered By" CssClass="font"></asp:Label> 
+            </div>
+            <div style="float:right;">
+            <a href="http://www.mcysoft.com/" target="_blank">
+            <img style="border:0px;" alt="MCYSoft" title="MCYSoft" src="images/mcylogo.png" />
+            </a> 
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div style=" margin-left:0px; margin-top:0px; margin-right:0px;">
+
+    <ul id="navigation" class="nav-main" 
+            style="background-image: url('images/dropdown-bg.gif')" >
+	<li><a href="Default.aspx">MCYPost</a></li>
+    
+    <li class="list"><a href="#">Müşteri İşlemleri</a>
+	    <ul class="nav-sub">
+        <li><a href="MusteriEkle.aspx">Müşteri Ekle</a></li>
+		<li><a href="MusteriDuzenle.aspx">Müşteri Düzenle</a></li>
+        <li><a href="MusteriSil.aspx">Müşteri Sil</a></li>
+	</ul>
+	</li>
+
+    <li class="list"><a href="#">SMS İşlemleri</a>
+	    <ul class="nav-sub">
+        <li><a href="SMS_Hizli_Gonder.aspx">Hızlı SMS Gönder</a></li>
+        <li><a href="SMS_Toplu_Gonder.aspx">Toplu SMS Gönder</a></li>
+<%--		<li><a href="Sms_Gonderilmisler.aspx">Gönderilmiş SMS'ler</a></li>--%>
+	</ul>
+	</li>
+    
+<%--    <li class="list"><a href="#">E-Posta İşlemleri</a>
+	    <ul class="nav-sub">
+            <li><a href="Mesaj_KisitliHizmet.aspx">Yeni Mail Gönder</a></li>
+		    <li><a href="Mesaj_KisitliHizmet.aspx">Gönderilmiş Mailler</a></li>
+            <li><a href="Mesaj_KisitliHizmet.aspx">Mail Adresleri</a></li>
+	    </ul>
+	</li>
+
+    <li class="list"><a href="#">İstatislikler</a>
+	    <ul class="nav-sub">
+            <li><a href="#">SMS İstatislikleri</a></li>
+ 		    <li><a href="#">EPosta İstatislikleri</a></li>
+	    </ul>
+	</li>
+
+    <li class="list"><a href="#">Araçlar</a>
+	    <ul class="nav-sub">
+            <li><a href="#">Dil Ayarları</a></li>
+            <li><a href="#">Mailing Ayarları</a></li>
+            <li><a href="#">Yetki Ayarları</a></li>
+ 		    <li><a href="#">Kullanıcı Ayarları</a></li>
+            <li><a href="#">Grup Tanımlamaları</a></li>
+            <li><a href="#">Kategori Tanımlamaları</a></li>
+	    </ul>
+	</li>--%>
+    
+    <li><a href="Logout.aspx">Çıkış</a></li>
+
+    </ul>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

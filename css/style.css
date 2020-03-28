@@ -1,0 +1,17 @@
+body {
+	 margin:0;}
+#basvuruFormu {margin-left:20px;}
+/********** contact form **********/
+#basvuruFormu .contactform {padding:5px 10px; width:500px;}
+#basvuruFormu .contactform * { color:#000000;}
+#basvuruFormu .contactform ol { margin:0; padding:0; list-style:none;}
+#basvuruFormu .contactform li { margin:0; padding:0; background:none; border:none; display:block;}
+#basvuruFormu .contactform li.buttons { margin:5px 0 5px 0;}
+#basvuruFormu .contactform label { margin:0; width:110px; display:block; padding:10px 0; color:#1c1c1c; font: bold 13px Arial, Helvetica, sans-serif; text-transform:capitalize; float:left;}
+#basvuruFormu .contactform label span { color:#F00;}
+#basvuruFormu .contactform input.text { width:380px; border:1px solid #d4d4d4; margin:10px 0; padding:5px 2px; height:16px; background:#f2f2f2; float:left;}
+#basvuruFormu .contactform textarea { width:380px; border:1px solid #d4d4d4; margin:10px 0; padding:2px; background:#f2f2f2; float:left;}
+#basvuruFormu .contactform li.buttons input { padding:3px 0 3px 380px; margin:0; border:0; color:#FFF; float:left;}
+p.response { text-align:center; color:#F00; font: normal 11px  Georgia, "Times New Roman", Times, serif; line-height:1.8em; width:auto;}
+#basvuruFormu .MusteriList {padding:5px 10px; width:300px;}
+.dropdownlist_il { width:290px; border:1px solid #d4d4d4; margin:10px 0; padding:5px 2px; height:28px; background:#f2f2f2; float:left;}
